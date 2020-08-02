@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotels</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"crossorigin="anonymous"/>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+	<script
+  src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+  crossorigin></script>
+	<script
+  src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+  crossorigin></script>
+  <style type="text/css">
+  	.hh{
+      transform: translate(-2px, -10px);
+      box-shadow: rgba(0,0,0,.2) -5px 6px 5px;
+  	}
+    .hh:hover{
+      transform: translate(-4px, -20px);
+      box-shadow: rgba(0,0,0,.4) -10px 12px 10px;
+    }
+  	.rounded-circle:hover{
+      animation: shake 0.5s;
+      animation-iteration-count: infinite;
+      border:4px solid #0eb7da;
+    }
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg);}
+      50% { transform: translate(-1px, 2px) rotate(-1deg);}
+      60% { transform: translate(-3px, 1px) rotate(0deg);}
+      70% { transform: translate(3px, 1px) rotate(-1deg);}
+      80% { transform: translate(-1px, -1px) rotate(1deg);}
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style>
+</head>
+<body role="documnet" id="all">
+<div class="jumbotron jumbotron-fluid" style="height:300px;">
+	<img class="navbar-brand" style=" position: relative;top:-70px; width:100px;height:100px;"src="logo.png">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p  style="display: inline-block;position: relative;top:-50px;right:-29%;"><a href="index.html" class="text-secondary">Home</a></p>&nbsp;&nbsp;
+	<p style="display: inline;position: relative;top:-50px;right:-29%;">|</p>&nbsp;&nbsp;
+  	<p style="display: inline;position: relative;top:-50px;right:-29%;"><a href="#footer" class="text-secondary">Contact Us</a></p>
+  <div class="container ">
+    <h1 class="display-4" style=" position: relative;top:-50px; text-align: center;" >Best Hotels</h1>
+    <p class="lead" style="text-align: center;position: relative;top:-50px; ">Stuck Where to go we will find for you. </p>
+    <form class="form-inline"style="position: relative;top:-60px;">
+    <p class=col-md-3></p>
+  <i class="fas fa-search" aria-hidden="true"></i>
+  <input class="form-control form-control-sm ml-3 w-50"id="input" type="text" placeholder="Search for Hotels"
+    aria-label="Search">
+</form>   
+</div>
+</div>
+</div>
+<div id="error">
+  </div>
+<div class="container" id="card">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card hh" style="width: 18rem;">
+  			<img class="card-img-top" src="c_1.jpg" alt="Card image cap">
+  			<div class="card-body ">
+    			<h5 class="card-title">Why us?</h5>
+    			<p class="card-text">Our customer choose us because we provide good quality of hotels and better service for you </p>
+  			</div>
+		</div>
+    </div>
+    <div class="col-sm">
+            <div class="card hh" style="width: 18rem;">
+  			<img class="card-img-top" src="c_2.jpg" alt="Card image cap">
+  			<div class="card-body ">
+    			<h5 class="card-title">Best Place</h5>
+    			<p class="card-text">We will find hotels in the best place for you with best price and quality of food. </p>
+  			</div>
+		</div>
+    </div>
+    
+  </div>
+</div>
+<div class="container"style="height:50px;">
+  </div>
+  <div class="container4" style="height:100px;">
+    <h2 id="txt" style="text-align: center;">Choose Your Best</h2></div>
+    <div id="content"  class="container"  role="main">
+    </div>
+    <br/>
+    <br/>
+    <!-- Footer -->
+<footer id="footer"class="page-footer font-small bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center" style="text-align: center;">
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="pin-ic">
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      
+
+    </div>
+    
+  </div>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> achalbhadada55@gmail.com</a>
+  </div>
+
+</footer>
+<!-- Footer -->
+<script id="album-template" type="text/x-handlebars-template">
+      <div class="row" style="grid-row-gap: 50px;" >
+        {{#each images}} 
+        <div class="col-md-6" > 
+         <div class="thumbnail" data-id="{{@index}}">
+            <a id="{{id}}" href="{{href}}"><img class="rounded-circle" src="{{src}}" style="width: 300px;height: 300px;" alt=""/></a> 
+             <div class="author">
+                <h3 class="text-secondary">&nbsp;&nbsp; {{title}} </h3> 
+             </div>
+          </div>
+          </div> 
+            {{/each}}
+      </div>
+    </script>
+    <script type="text/javascript">
+      var source= $("#album-template").html();
+      var template= Handlebars.compile(source);
+      var data={images:[
+        {
+          src: "taj.jpg",
+          title: "The Taj Mahal Palace",
+          alt: "the taj mahal palace",
+          href: "taj.html",
+          id :"1", 
+        },
+        {
+          src: "ob.webp",
+          title: "The Oberoi",
+          alt: "the oberoi",
+          href: "oberoi.html",
+          id :"2",
+        },
+        {
+          src: "four.webp",
+          title: "Four Seasons Hotel",
+          alt: "four seasons hotel",
+          href: "four seasons.html",
+          id :"3",
+        },
+        {
+          src: "roseate.jpg",
+          title: "Roseate House",
+          alt: "roseate house",
+          href: "roseate.html",
+          id :"4",
+        },
+        ]};
+        var count=-1;
+        var html=template(data);
+        $("#error").html("<div id='st-no-results' class='st-no-results'><h2 class='text-secondary'style='text-align:center;'>No results found.</h2></div>");
+        $("#error").hide(); 
+        $('#content').html(html);
+        $("#input").keyup(function(){
+          $("#error").hide();
+          var search_text=$('#input').val();
+          var len=search_text.length;
+          $("#txt").show();
+          var filteredData={
+            images: data.images.filter(function(d){
+              if (d.title.search(search_text) > -1){
+                $("#card").hide();
+              return true;
+            }
+            if (d.alt.search(search_text) > -1){
+                $("#card").hide(); 
+              return true;
+            }
+            else
+            {
+              $("#card").hide();
+            return false;
+          }
+            })
+          };
+          if(search_text==="")
+            {
+              $("#card").show();
+            }
+            if(filteredData.images.length==0)
+            { 
+              $("#txt").hide();
+              $("#error").show();
+            }
+        var html= template(filteredData);
+        $('#content').html(html);
+      });
+    </script>
+</body>
+</html>
